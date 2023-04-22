@@ -6,9 +6,10 @@ config();
 
 export const startServer = () => {
   const httpServer = createHttpServer();
+
   const wss = createWSServer(Number(process.env.WS_PORT));
 
-  httpServer.listen(process.env.PORT);
+  httpServer.listen(process.env.HTTP_PORT);
   wss.on("connection", stream => {});
 
   console.log(`Start static http server on the ${process.env.HTTP_PORT} port..`);
