@@ -21,5 +21,6 @@ export const startServer = () => {
   process.on("SIGINT", () => {
     httpServer.close();
     wss.close();
+    process.exit(0);
   });
 };

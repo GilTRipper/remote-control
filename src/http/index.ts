@@ -11,7 +11,6 @@ export const createHttpServer = () => {
       if (err) {
         res.writeHead(404);
         res.end(JSON.stringify(err));
-        //   ws.close();
         return;
       }
       res.writeHead(200);
