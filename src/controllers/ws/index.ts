@@ -26,7 +26,7 @@ export const wsController = (ws: WebSocket) => {
 
     try {
       const result = await commands[command as CommandType](args);
-      console.log({ result });
+
       duplex.write(result);
     } catch (e) {
       console.error(e);
